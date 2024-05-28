@@ -1,0 +1,226 @@
+@media (max-width: 1535px){
+    header{
+        padding: 15px 5%;
+        transition: .2s;
+    }
+    .logo-img img{
+        width: 100%;
+        height: auto;
+    }
+
+    .nosotros-text h1{
+        padding-top: 50px;
+        font-size: 70px;
+        margin-top: 30px;
+    }
+
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    /*Products*/
+
+    .imageProducts img{
+        width: 100%;
+        height: 380px ;
+        object-fit: cover;
+    }
+}
+
+@media (max-widht: 1460px) {
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+
+    footer{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1340px){
+    .logo-img img{
+        width: 100%;
+        height: auto;
+    }
+
+    .nosotros-text h1{
+        padding-top: 100px;
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+
+    #products h2{
+        font-size: 75px;
+    }
+
+    .imageProducts img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    #contact h2{
+        font-size: 75px;
+    }
+}
+
+@media (max-width: 1195px){
+    header{
+        padding: 15px 10%;
+        transition: .2s;
+    }
+
+    .logo-text{
+        padding-left: 10px;
+        height: auto;
+    }
+
+    section{
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .nosotros-text{
+        padding-top: 115px;
+    }
+
+    .logo-img img{
+        width: 80%;
+    }
+
+    .nosotros{
+        text-align: center;
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .icons{
+        margin-top: 25%;
+    }
+
+    /* Products */
+    .imageProducts{
+        transition: .2s;
+        text-align: center;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .imageProducts img{
+        width: 90%;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 990px) {
+    #menu-icon{
+        display: block;
+    }
+
+    .logo-text{
+        font-size: 30px;
+    }
+    .navlist{
+        border-radius: 20px;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        height: 20vh;
+        background-image: linear-gradient(rgba(20, 22, 20, 0.986),rgba(30, 30, 30, 0.966),rgb(20, 20, 20));
+        display: flex;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 50px;
+        transition: .55s ease;
+    }
+
+    .navlist a{
+        display: block;
+        margin-left: 0;
+        margin: 15px 0;
+    }
+
+    .navlist.open{
+        right: 0;
+    }
+
+
+    .icons{
+        display: none;
+    }
+
+    .nosotros h1{
+        font-size: 60px;
+    }
+
+    .nosotros p{
+        font-size: 15px ;
+    }
+
+    #products h2{
+        font-size: 60px;
+    }
+
+    #products p{
+        font-size: 15px;
+    }
+
+    .imageProducts{
+        display: none;
+    }
+
+    #contact h2{
+        font-size: 60px;
+    }
+
+    #contact p{
+        font-size: 15px;
+    }
+
+    p strong{
+        font-size: 15px ;
+    }
+
+    .form-icons p{
+        font-size: 15px;
+    }
+    .img-instagram {
+        width: 15%;
+    }
+    .img-tiktok{
+        width: 15%;
+    }
+    
+    .img-facebook{
+        width: 15%;
+    }
+
+    legend{
+        font-size: 30px;
+    }
+    
+    label{
+        font-size: 15px;
+    }
+    
+    input{
+        font-size: 15px;
+    }
+    
+    .btn{
+        font-size: 15px;     
+        width: 100px;
+        height: auto;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+    
+}
