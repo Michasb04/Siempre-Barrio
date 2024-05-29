@@ -16,6 +16,7 @@
 
 body{
     background-image:radial-gradient( #3D3D31, #494937, #757555);
+    overflow-x: hidden;
 }
 
 
@@ -57,7 +58,13 @@ p{
     font-weight: 600;
 }
 
-main{
+.nav-container{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -65,24 +72,37 @@ main{
 /*------------ Nav Styles-------------*/
 
 nav{
-    width: 1280px;
     position: sticky;
     z-index: 9999;
-    display: flex;
-    justify-content: space-between;
     background: var(--nav-color);
     padding: 20px;
-    text-align: center;
     
     & ul {
         display: flex;
+        justify-content: center;
+        padding: 10px;
         gap: 50px;
     }
 
+    & ul a{
+        border-radius: 5px;
+        border-bottom: 2px solid transparent;
+        transition: all .55s ease;
+    }
+
+    & ul a:hover{
+        border-bottom: 2px solid var(--white-color);
+    }
+
+    & i{
+        padding-right: 5px;
+    }
+
     & a{
+        user-select: none;
         font-size: 15px;
-        text-align: center;
         color: var(--primary-color);
+        height: auto;
     }
 }
 
@@ -93,7 +113,7 @@ nav{
     cursor: pointer;
     display: none;
     font-size: 40px;
-    z-index: 10001;
+    z-index: 1000;
 }
 
 
@@ -104,8 +124,8 @@ nav{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     & img{
         width: 500px;
@@ -146,7 +166,6 @@ nav{
     }
     
     & img{
-        margin: 20px;
         width: 45px;
         height: 45px;
         display: inline-block;
@@ -156,6 +175,22 @@ nav{
     & img:hover{
         transform: scale(1.5);
     }
+
+    & p{
+        font-size: 25px;
+        font-family: "Water Brush";
+        font-weight: 100;
+    }
+}
+.social-icons{
+    display: grid;
+    padding: 0 600px;
+    grid-template-columns: repeat(3,1fr);
+    transition: all .55s ease;
+}
+
+.social-icons:hover{
+    transform: scale(1.1);
 }
 
 
@@ -164,27 +199,29 @@ nav{
     text-align: center;
 
     & h2{
-        margin: 20px;
+        margin-top: 20px;
         text-align: center;
     }
 
     & p{
         margin: 0 auto;
+        padding: 30px;
         width: 900px;
         line-height: 1.9;
     }
 
     & img{
-        width: 500px;
+        width: 345px;
         height: 600px;
         object-fit: cover;
         border-radius: 30px;
-        border: 1px solid var(--primary-color);
-        background: var(--white-color);
+        padding: 20px;
         transition: all .55s ease;
     }
 
     & img:hover{
+        background:var(--white-color);
+        padding: 1px;
         transform: scale(1.1);
     }
 }
@@ -229,13 +266,30 @@ nav{
 
 /*------------ Contact Styles-------------*/
 
-#contact{
+.section-contact{
     text-align: center;
     margin-bottom: 100px;
+
+    & h2{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    & p{
+        margin: 0 auto;
+        padding: 30px;
+        width: 900px;
+        line-height: 1.9;
+    }
 
     & img{
         margin: 15px 15px;
         width: 90px;
+        transition: all .55s ease;
+    }
+
+    & img:hover{
+        transform: scale(1.3);
     }
 }
 
@@ -246,14 +300,29 @@ nav{
     margin-bottom: 50px;
 
     & p{
+        font-weight: bold;
         text-align: center;
-        width: auto;   
+        width: auto;  
+        color: var(--primary-color);
+        transition: all .55s ease; 
+    }
+
+    
+    & p:hover{
+        transform: scale(1.3);
     }
 
     & a{
+        border-left: 2px solid var(--primary-color);
+        border-left-style: dotted;
         margin-top: 30px;
         margin-bottom: 30px;
         text-align: center;
+    }
+
+    & a:last-child {
+        border-right: 2px solid var(--primary-color);
+        border-right-style: dotted;
     }
 }
 /*------------ Footer Styles-------------*/

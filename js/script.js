@@ -17,17 +17,18 @@ const sr = ScrollReveal (
 
 /* Main Animations */
 
-sr.reveal('.logo-text',{delay:200,origin:'left',reset:false});
 sr.reveal('.navlist', {delay:200, origin:'right', reset:false});
-sr.reveal('.nosotros-text',{delay:200, origin: 'top'});
-sr.reveal('.logo-img',{delay:500, origin: 'right'});
-sr.reveal('.icons',{delay:400, origin: 'left', reset:false});
+sr.reveal('.logo-text',{delay:200,origin:'left',reset:false});
+sr.reveal('.hero-text',{delay:200,origin:'left',reset:true});
+sr.reveal('.icons',{delay:400, origin: 'bottom', reset:true});
+sr.reveal('.hero-img',{delay:500, origin:'right'});
 
 /* Products Animations */
 sr.reveal('.section-products',{delay:200, origin:'left'});
 
-/* Form Animatios*/
-sr.reveal('.section-contact',{delay:200,origin:'right'});
+/* Contact Animatios*/
+sr.reveal('.section-contact',{delay:200,origin:'right', reset:true});
+sr.reveal('.contact-icons',{delay:200,origin:'bottom', reset:true});
 
 // Show borderbox deppending to page status 
 
