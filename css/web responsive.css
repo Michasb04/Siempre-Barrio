@@ -1,73 +1,5 @@
-@media (max-width: 1535px){
-    header{
-        padding: 15px 5%;
-        transition: .2s;
-    }
-    .logo-img img{
-        width: 100%;
-        height: auto;
-    }
-
-    .nosotros-text h1{
-        padding-top: 50px;
-        font-size: 70px;
-        margin-top: 30px;
-    }
-
-    .icons{
-        padding: 0 3%;
-        transition: .2s;
-    }
-
-    /*Products*/
-
-    .imageProducts img{
-        width: 100%;
-        height: 380px ;
-        object-fit: cover;
-    }
-}
-
-@media (max-widht: 1460px) {
-    section{
-        padding: 0 12%;
-        transition: .2s;
-    }
-
-    footer{
-        width: 100%;
-    }
-}
-
-@media (max-width: 1340px){
-    .logo-img img{
-        width: 100%;
-        height: auto;
-    }
-
-    .nosotros-text h1{
-        padding-top: 100px;
-        font-size: 75px;
-        margin: 0 0 30px;
-    }
-
-    #products h2{
-        font-size: 75px;
-    }
-
-    .imageProducts img{
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    #contact h2{
-        font-size: 75px;
-    }
-}
-
 @media (max-width: 1195px){
-    header{
+    nav{
         padding: 15px 10%;
         transition: .2s;
     }
@@ -77,35 +9,31 @@
         height: auto;
     }
 
-    section{
-        padding: 0 3%;
-        transition: .2s;
+    .hero-text{
+        padding-top: 10px;
     }
 
-    .nosotros-text{
-        padding-top: 115px;
-    }
-
-    .logo-img img{
+    .hero-img img{
         width: 80%;
     }
 
-    .nosotros{
-        text-align: center;
-        height: 100%;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-    }
-
-    .icons{
-        margin-top: 25%;
+    .social-icons{
+        & img{
+            width: 40px;
+        }
+        & p{
+            display: none;
+        }
     }
 
     /* Products */
-    .imageProducts{
+    .section-products{
         transition: .2s;
         text-align: center;
-        grid-template-columns: repeat(2,1fr);
+
+        & img{
+            height: 500px;
+        }
     }
 
     .imageProducts img{
@@ -124,103 +52,216 @@
         font-size: 30px;
     }
     .navlist{
-        border-radius: 20px;
+        border-radius: 10px;
         position: absolute;
         top: 100%;
         right: -100%;
-        width: 250px;
-        height: 20vh;
+        width: 180px;
+        height: 25vh;
         background-image: linear-gradient(rgba(20, 22, 20, 0.986),rgba(30, 30, 30, 0.966),rgb(20, 20, 20));
         display: flex;
         vertical-align: middle;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 50px 50px;
+        padding: 10px 10px;
         transition: .55s ease;
     }
 
     .navlist a{
         display: block;
-        margin-left: 0;
-        margin: 15px 0;
+        margin: 0 0;
     }
 
     .navlist.open{
         right: 0;
     }
-
-
-    .icons{
-        display: none;
-    }
-
-    .nosotros h1{
+    
+    .hero-text h1{
         font-size: 60px;
     }
 
-    .nosotros p{
+    .hero-text p{
         font-size: 15px ;
     }
 
-    #products h2{
-        font-size: 60px;
+    .icons .container{
+        width: 600px;
     }
 
-    #products p{
-        font-size: 15px;
+    .social-icons{
+        width: 600px;
     }
 
-    .imageProducts{
-        display: none;
+    .icons img{
+        width: 40px;
     }
 
-    #contact h2{
-        font-size: 60px;
+    .hero .container{
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+        text-align: -webkit-center;
     }
 
-    #contact p{
-        font-size: 15px;
+    .social-icons .container{
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+        text-align: -webkit-center;
     }
 
-    p strong{
-        font-size: 15px ;
+    #products .container{
+        width: 600px;
     }
-
-    .form-icons p{
-        font-size: 15px;
-    }
-    .img-instagram {
-        width: 15%;
-    }
-    .img-tiktok{
-        width: 15%;
+    .section-products {
+        & h2{
+            font-size: 60px;
+            width: 600px;
+        }
+        & p{
+            font-size: 15px;
+            width: 600px;
+        }
     }
     
-    .img-facebook{
-        width: 15%;
+    #contact .container{
+        width: 600px;
+    }
+    .section-contact{
+        & h2{
+            font-size: 60px;
+            width: 600px;
+        }
+        & p{
+            font-size: 15px;
+            width: 600px;
+        }
+        & p strong{
+            font-size: 15px ;
+        }
     }
 
-    legend{
-        font-size: 30px;
-    }
-    
-    label{
-        font-size: 15px;
-    }
-    
-    input{
-        font-size: 15px;
-    }
-    
-    .btn{
-        font-size: 15px;     
-        width: 100px;
-        height: auto;
-    }
+    .contact-icons{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 400px;
 
+        & img{
+            width: 50px;
+        }
+
+        & p{
+            width: 200px;
+        }
+
+        & a{
+            width: 200px;
+            border-left: 1px solid var(--primary-color);
+        }
+    
+        & a:last-child {
+            border-right: 1px solid var(--primary-color);
+        }
+    }
+    
     footer{
         font-size: 10px;
     }
     
+}
+
+@media (max-width: 560px){
+    .hero .container{
+        width: 400px;
+
+        & .hero-text{
+            & h1{
+                font-size: 50px;
+                padding-bottom: 5px;
+            }
+    
+            & p{
+                width: 400px;
+            }
+            }
+        .hero-img{
+            & img{
+                padding-bottom: 50px;
+                max-width: 300px;
+            }
+        } 
+    }
+
+    .container .icons{
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    .icons{
+        width: 400px;
+        & h3{
+            font-size: 40px;
+        }
+        & img{
+            width: 30px;
+        }
+    }
+
+    .social-icons{
+        width: 400px;
+    }
+
+    #products .container{
+        width: 400px;
+    }
+    .section-products {
+        & h2{
+            font-size: 40px;
+            width: 400px;
+        }
+        & p{
+            width: 400px;
+        }
+    }
+
+    .slide{
+        max-width:200px;
+    }
+
+    #contact .container{
+        width: 400px;
+    }
+    .section-contact{
+        & h2{
+            font-size: 40px;
+            width: 400px;
+        }
+        & p{
+            width: 400px;
+        }
+    }
+
+    .contact-icons{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 400px;
+
+        & img{
+            width: 40px;
+        }
+
+        & p{
+            display: none;
+        }
+
+        & a{
+            width: 130px;
+            border-left: 1px solid var(--primary-color);
+        }
+    
+        & a:last-child {
+            border-right: 1px solid var(--primary-color);
+        }
+    }
 }

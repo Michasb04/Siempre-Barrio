@@ -73,6 +73,7 @@ p{
 
 nav{
     position: sticky;
+    top: 0;
     z-index: 9999;
     background: var(--nav-color);
     padding: 20px;
@@ -104,7 +105,20 @@ nav{
         color: var(--primary-color);
         height: auto;
     }
+
+    animation: header linear both;
+    animation-timeline: scroll(root block); /*Escuchar el Scroll Vertical*/
+    animation-range: 0 200px;
 }
+
+@keyframes header{
+    to{
+        background: rgba(20, 22,20, 0.8);
+        backdrop-filter: blur(50px);
+        transition: all .55s ease;
+    }
+}
+
 
 /*------------ Menu Styles-------------*/
 
@@ -119,7 +133,7 @@ nav{
 
 /*------------ Hero Styles-------------*/
 
-.hero{
+.hero .container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,16 +197,11 @@ nav{
     }
 }
 .social-icons{
+    width: 900px;
+    margin: 0 auto;
     display: grid;
-    padding: 0 600px;
     grid-template-columns: repeat(3,1fr);
-    transition: all .55s ease;
 }
-
-.social-icons:hover{
-    transform: scale(1.1);
-}
-
 
 /*------------ Products Styles-------------*/
 .section-products {
@@ -220,8 +229,7 @@ nav{
     }
 
     & img:hover{
-        background:var(--white-color);
-        padding: 1px;
+        padding: 20px;
         transform: scale(1.1);
     }
 }
